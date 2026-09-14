@@ -24,14 +24,16 @@ async function caricamentoFilm(): Promise<void> {
     card.innerHTML = "";
     films.forEach((film) => {
       const filmCard = document.createElement("div");
-      filmCard.className = "film-card";
-      filmCard.innerHTML = `
+            filmCard.innerHTML = `
         <img src="${film.poster_url}" alt="${film.title}">
-        <h2>${film.title} (${film.year})</h2>
-        <p>Genere: ${film.genre}</p>
-        <p>Durata: ${film.duration} minuti</p>
-        <p>Valutazione: ${film.rating}</p>
-        <p>${film.description}</p>
+        <div class="film-content">
+          <h2>${film.title} (${film.year})</h2>
+          <p>Genere: ${film.genre}</p>
+          <p>Durata: ${film.duration} minuti</p>
+          <p>Valutazione: ${film.rating}</p>
+          <p>${film.description}</p>
+          <a href="/dettaglio.html?id=${film.id}">Scopri di più</a>
+        </div>
       `;
       card.appendChild(filmCard);
     });
