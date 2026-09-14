@@ -1,0 +1,24 @@
+{
+  "name": "cinema",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lolloo26/cinema.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lolloo26/cinema/issues"
+  },
+  "homepage": "https://github.com/lolloo26/cinema#readme",
+  "devDependencies": {
+    "vite": "^8.3.0"
+  }
+}
