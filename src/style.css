@@ -147,3 +147,171 @@ footer .logo-title {
         text-align: center;
     }
 }
+
+.dettaglio-container {
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.dettaglio-img img {
+    width: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.dettaglio-info h2 {
+    text-align: left;
+    color: #e50914; 
+    margin-bottom: 1rem;
+}
+
+.dettaglio-info p {
+    margin-bottom: 0.5rem;
+    color: #dddddd;
+}
+
+
+.spettacoli-section h3 {
+    color: #e50914;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.spettacoli-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.spettacolo-item {
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.spettacolo-item:hover {
+    background-color: #2a2a2a;
+    border-color: #e50914;
+}
+
+.spettacolo-item-info strong {
+    color: #ffffff;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.spettacolo-item-posti {
+    text-align: right;
+    color: #aaaaaa;
+}
+
+.spettacolo-item-btn {
+    background-color: #e50914;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.modal-content h3 {
+    color: #e50914;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #dddddd;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: white;
+}
+
+.form-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-confirm {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-cancel {
+    background-color: transparent;
+    color: #aaaaaa;
+    border: 1px solid #aaaaaa;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .dettaglio-container {
+        flex-direction: column;
+    }
+    .dettaglio-img img {
+        width: 100%;
+    }
+    .spettacolo-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .spettacolo-item-posti {
+        text-align: left;
+    }
+}
+.modal-overlay.hidden {
+  display: none;
+}

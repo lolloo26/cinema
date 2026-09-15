@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineAura</title>
+    <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+    <header style="position: relative;">
+        <a href="/index.html" style="color: #ffffff; text-decoration: none; position: absolute; left: 2rem; top: 50%; transform: translateY(-50%); font-weight: bold;">← Torna ai film</a>
+        <h1 class="logo-title">CINE<span>AURA</span></h1>
+    </header>
+    <main>
+        <div id="dettaglio-film"></div>
+
+        <div class="spettacoli-section">
+            <h3>Prossimi spettacoli</h3>
+            <div id="lista-spettacoli" class="spettacoli-list"></div>
+        </div>
+    </main>
+
+    <div id="modale-prenotazione" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3>Prenota il tuo posto</h3>
+            <form id="form-prenotazione">
+                <input type="hidden" id="spettacolo-id-input">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cognome">Cognome</label>
+                    <input type="text" id="cognome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="btn-annulla" class="btn-cancel">Annulla</button>
+                    <button type="submit" class="btn-confirm">Conferma prenotazione</button>
+                </div>
+            </form>
+            <p id="booking-message"></p>
+        </div>
+    </div>
+
+    <script type="module" src="/src/dettaglio.ts"></script>
+
+    <footer>
+        <h1 class="logo-title">C'AVRAI <span>AURA</span>?</h1>
+    </footer>
+</body>
+</html>
