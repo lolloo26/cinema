@@ -117,16 +117,16 @@ async function caricaSpettacoli(): Promise<void> {
 
 async function prenota(event: Event): Promise<void> {
   event.preventDefault();
-  const nome = (document.getElementById("nome") as HTMLInputElement).value;
-  const cognome = (document.getElementById("cognome") as HTMLInputElement).value;
+  const first_name = (document.getElementById("nome") as HTMLInputElement).value;
+  const last_name = (document.getElementById("cognome") as HTMLInputElement).value;
   const email = (document.getElementById("email") as HTMLInputElement).value;
   const messaggio = document.getElementById("booking-message");
 
   try {
-    const response = await fetch(`${api}/bookings`, {
+    const response = await fetch(`${api}/screenings/${screeningId}/bookings`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ filmId, screeningId, nome, cognome, email }),
+      body: JSON.stringify({ first_name, last_name, email }),
     });
 
     if (messaggio) {
@@ -137,7 +137,7 @@ async function prenota(event: Event): Promise<void> {
     if (response.ok) {
       setTimeout(() => {
         chiudiModale();
-        caricaSpettacoli(); 
+        caricaSpettacoli();
       }, 1200);
     }
   } catch (error) {
